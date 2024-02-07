@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Piyush</a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About me</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Application Developer</p>
+                <h1>Hi, I am <span>Piyush</span><br>Nice to meet you.</h1>
+            </div>
+        </div>
+    </div>
+<!-- ------------About me-------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="coloumn1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Seeking for opportunities and secure a position where I can efficiently
+                        contribute my skills and abilities for the growth of my organization and my
+                        professional career. I am a responsible person and I am friendly to everyone.</p>
+                        <div class="tab-titles">
+                            <p class="links active-link" onclick="opentab('skills')" >Skills</p>
+                            <p class="links" onclick="opentab('experience')">Experience</p>
+                            <p class="links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML, CSS, JavaScript</span><br>Front-end Development</li>
+                                <li><span>Core Java, Python, C/C++</span><br>Back-end Development</li>
+                                <li><span>Mulesoft</span><br>API Integration and Management</li>    
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Application Developer</span><br>2 years Experience in Caelius Consulting Inc.</li>
+                                <li><span>Projects</span><br>TGIF and IHG</li>
+                                <li><span>Tasks Performed</span><br>Support Mulesoft applications</li>    
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Martriculation(PCM 2015-2017)</span><br>CBSE(88%)</li>
+                                <li><span>Intermediate(PCM 2017-2019)</span><br>CBSE(73.5%)</li>
+                                <li><span>Bachelor of Engineering(CSE 2019-2023)</span><br>IKGPTU(8.45 Sgpa)</li>    
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------Services---------------- -->
+    <!-- <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Front-end Development</h2>
+                    <p>Build and manage interactive User Interfaces.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Back-end Development</h2>
+                    <p>Application Development using core-Java, Python or Mulesoft.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1>Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> piyush21077@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +91-9097822967</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/profile.php?id=100076215222642"><i><i class="fa-brands fa-facebook"></i></i></a>
+                        <a href="https://www.linkedin.com/in/piyush-kumar-870358191/"><i><i class="fa-brands fa-linkedin"></i></i></a>
+                    </div> 
+                    <a href="" class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright &#169; Made with <i class="fa-solid fa-heart"></i> by Piyush Kumar</p>
+        </div>
+    </div>
+    <script>
+        var links= document.getElementsByClassName("links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of links){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        
+    </script>    
+</body>
+</html>
