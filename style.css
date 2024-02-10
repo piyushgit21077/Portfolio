@@ -244,12 +244,12 @@ form input, form textarea{
     display: none;
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
     .header{
         background-image: url(phone_bg.png);
     }
     .header-text{
-        margin-top: 160%;
+        margin-top: 150%;
         font-size: 16px;
     }
     .header-text h1{
